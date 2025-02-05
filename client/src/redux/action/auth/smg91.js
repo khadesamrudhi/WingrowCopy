@@ -102,7 +102,7 @@ export const verifyCode = payload => {
   return dispatch => {
     dispatch(verifyCodeStart())
     authService.verifyCode(payload).then(response => {
-      if (response?.success) {
+      if (response?.type==="success") {
         localStorage.setItem('isVerify', true)
         dispatch(verifyCodeSuccess(response))
       } else {

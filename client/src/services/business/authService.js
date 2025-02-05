@@ -129,7 +129,7 @@ export const verifyCode = async (payload) => {
 
     console.log("✅ Backend Verification Response:", response.data);
 
-    if (response.data?.type === "success") {
+    if (response.data?.type === "success") {  ///yaha
       return response.data; // OTP verified successfully
     } else {
       throw new Error(response.data?.message || "Invalid OTP. Please try again.");
